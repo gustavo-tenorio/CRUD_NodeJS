@@ -2,17 +2,17 @@
     <body>
       <div id="cadastro">
           <h1>Cadastro</h1>
-          <form action="">
+          <form action="/save" method="POST">
               <label for="nome">Nome</label>
-              <input type="text" placeholder="Insira seu nome" required>
+              <input type="text" name="nome" placeholder="Insira seu nome" required>
               <br>
               <br>
               <label for="email">Email</label>
-              <input type="text" placeholder= "Insira seu Email" required>
+              <input type="text" name="email" placeholder= "Insira seu Email" required>
               <br>
               <br>
               <label for="idade">Idade</label>
-              <input type="text" placeholder="Insira sua idade" required>
+              <input type="text" name="idade" placeholder="Insira sua idade" required>
               <br>
               <br>
               <button type="submit">Cadastrar</button>
