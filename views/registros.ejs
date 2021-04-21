@@ -9,8 +9,7 @@
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Idade</th>
-                <th></th>
-                <th></th>
+                <th>Ações</th>
             </tr>
             <% cadastros.forEach(cadastros =>{ %>
             <tr>
@@ -20,9 +19,10 @@
                 <td><%=cadastros.idade%></td>
                 <td>
                     <button id="editar">Editar</button>
-                </td>
-                <td>
-                    <button id="deletar">Deletar</button>
+                    <form action="/registros/delete" method="POST" style="display: inline;" onsubmit="confirmarDelete(event, this)">
+                        <input type="hidden" value="<%=cadastros.id%>" name="id">
+                        <button id="deletar">Deletar</button>
+                    </form>
                 </td>
             </tr>
             <% }) %>
@@ -31,5 +31,16 @@
     </div>
    
 </body>
+<script>
+    function confirmarDelete(event , form){
+        event.preventDefault();
+        let decision = confirm("Você realmente deseja deletar esse cadastro?");
 
+        if(decision){
+            form.submit();
+        }else{
+            window.alert("Cadastro não deletado!");
+        }
+    } 
+</script>
 </html>

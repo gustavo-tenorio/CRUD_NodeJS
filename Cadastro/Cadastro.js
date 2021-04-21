@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
+
+//Criação da tabela e colunas utilizando Sequelize
 const Cadastro = connection.define('cadastro',{
     nome:{
         type:Sequelize.STRING,
