@@ -53,3 +53,59 @@ input:focus,button:focus{
     background:blue;
 }
 
+.conteudo{
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    position: absolute;
+    background:white;
+    border-radius:15px;
+}
+.conteudo a{
+    padding:10px;
+    background:darkblue;
+    font-size:18px;
+    text-decoration: none;
+    color:white;
+
+}
+.conteudo a:hover{
+    background:blue;
+}
+.conteudo table{
+    margin:20px;
+}
+.conteudo table,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.conteudo table th,td{
+    padding:20px;
+}
+
+#editar{
+    background:goldenrod;
+    padding:8px;
+    font-size:15px;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+#editar:hover{
+    background:gold;
+}
+#deletar{
+    background:firebrick;
+    padding:8px;
+    font-size:15px;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+#deletar:hover{
+    background:red;
+}
+

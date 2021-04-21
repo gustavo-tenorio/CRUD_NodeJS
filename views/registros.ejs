@@ -1,0 +1,35 @@
+<%- include('./partials/head') %>
+<body>
+    <div class="conteudo">
+        <h1>Registros</h1>
+        <a href="/">Cadastrar</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Idade</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% cadastros.forEach(cadastros =>{ %>
+            <tr>
+                <td><%=cadastros.id%></td>
+                <td><%=cadastros.nome%></td>
+                <td><%=cadastros.email%></td>
+                <td><%=cadastros.idade%></td>
+                <td>
+                    <button id="editar">Editar</button>
+                </td>
+                <td>
+                    <button id="deletar">Deletar</button>
+                </td>
+            </tr>
+            <% }) %>
+            
+        </table>
+    </div>
+   
+</body>
+
+</html>
