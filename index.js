@@ -25,13 +25,12 @@ connection.authenticate()
 
 //Rotas
 const cadastroController = require('./Cadastro/CadastroController');
-app.get('/',(req,res)=>{
-    res.render('index');
-});
-
 app.use('/',cadastroController);
 
 
+app.get('/',(req,res)=>{
+    res.render('index');
+});
 
 
 //Server

@@ -1,0 +1,32 @@
+<%- include('./partials/head') %>
+    <body>
+        <div class="cadastro">
+            <h1>Editar<br>Cadastro</h1>
+        
+            <form action="/registros/update" method="POST">
+            
+                <input type="hidden" name="id" value="<%=cadastros.id%>"> 
+              
+                <label for="nome">Nome</label>  
+                <input type="text" name="nome" placeholder="Insira seu nome"  value="<%=cadastros.nome%>" required>
+              
+                <br><br>
+                   
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder= "Insira seu Email" value="<%=cadastros.email%>" required >
+              
+                <br><br>
+              
+                <label for="idade">Idade</label>
+                <input type="text" name="idade" placeholder="Insira sua idade" value="<%=cadastros.idade%>" required>
+              
+                <br><br>
+            
+                <button type="submit">Atualizar</button>
+         
+            </form>
+      
+        </div>
+    </body>
+
+</html>

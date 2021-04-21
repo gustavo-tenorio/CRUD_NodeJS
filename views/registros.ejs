@@ -1,8 +1,9 @@
 <%- include('./partials/head') %>
 <body>
-    <div class="conteudo">
+    <div id="conteudo">
         <h1>Registros</h1>
-        <a href="/">Cadastrar</a>
+        <a href="/" id="cadastrar">Cadastrar</a>
+        
         <table>
             <tr>
                 <th>ID</th>
@@ -11,20 +12,25 @@
                 <th>Idade</th>
                 <th>Ações</th>
             </tr>
+            
             <% cadastros.forEach(cadastros =>{ %>
-            <tr>
-                <td><%=cadastros.id%></td>
-                <td><%=cadastros.nome%></td>
-                <td><%=cadastros.email%></td>
-                <td><%=cadastros.idade%></td>
-                <td>
-                    <button id="editar">Editar</button>
-                    <form action="/registros/delete" method="POST" style="display: inline;" onsubmit="confirmarDelete(event, this)">
-                        <input type="hidden" value="<%=cadastros.id%>" name="id">
-                        <button id="deletar">Deletar</button>
-                    </form>
-                </td>
-            </tr>
+            
+                <tr>
+                    <td><%=cadastros.id%></td>
+                    <td><%=cadastros.nome%></td>
+                    <td><%=cadastros.email%></td>
+                    <td><%=cadastros.idade%></td>
+                    
+                    <td>
+                        <a href="/registros/edit/<%=cadastros.id%>" id="editar">Editar</a>
+
+                        <form action="/registros/delete" method="POST" style="display: inline;" onsubmit="confirmarDelete(event, this)">
+                            <input type="hidden" value="<%=cadastros.id%>" name="id">
+                            <button id="deletar">Deletar</button>
+                        </form>
+                    
+                    </td>
+                </tr>
             <% }) %>
             
         </table>
